@@ -1,0 +1,320 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.06,
+          4.65
+        ]
+      },
+      "properties": {
+        "source_id": "R01",
+        "name": "Fictional Retail 01",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.055,
+          4.67
+        ]
+      },
+      "properties": {
+        "source_id": "R03",
+        "name": "Fictional Retail 03",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.057,
+          4.671
+        ]
+      },
+      "properties": {
+        "source_id": "R04",
+        "name": "Fictional Retail 04",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.075,
+          4.635
+        ]
+      },
+      "properties": {
+        "source_id": "R05",
+        "name": "Fictional Retail 05",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.077,
+          4.637
+        ]
+      },
+      "properties": {
+        "source_id": "R06",
+        "name": "Fictional Retail 06",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.076,
+          4.632
+        ]
+      },
+      "properties": {
+        "source_id": "R07",
+        "name": "Fictional Retail 07",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.107,
+          4.655
+        ]
+      },
+      "properties": {
+        "source_id": "R08",
+        "name": "Fictional Retail 08",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.11,
+          4.6
+        ]
+      },
+      "properties": {
+        "source_id": "R09",
+        "name": "Fictional Retail 09",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.08,
+          4.7
+        ]
+      },
+      "properties": {
+        "source_id": "R10",
+        "name": "Fictional Retail 10",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.09,
+          4.615
+        ]
+      },
+      "properties": {
+        "source_id": "R11",
+        "name": "Fictional Retail 11",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.12,
+          4.68
+        ]
+      },
+      "properties": {
+        "source_id": "R12",
+        "name": "Fictional Retail 12",
+        "category": "retail"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0555,
+          4.6705
+        ]
+      },
+      "properties": {
+        "source_id": "T01",
+        "name": "Fictional Access 01",
+        "category": "transport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.08,
+          4.64
+        ]
+      },
+      "properties": {
+        "source_id": "T02",
+        "name": "Fictional Access 02",
+        "category": "transport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.11,
+          4.665
+        ]
+      },
+      "properties": {
+        "source_id": "T03",
+        "name": "Fictional Access 03",
+        "category": "transport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.111,
+          4.596
+        ]
+      },
+      "properties": {
+        "source_id": "T04",
+        "name": "Fictional Access 04",
+        "category": "transport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.09,
+          4.69
+        ]
+      },
+      "properties": {
+        "source_id": "T05",
+        "name": "Fictional Access 05",
+        "category": "transport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.085,
+          4.62
+        ]
+      },
+      "properties": {
+        "source_id": "T06",
+        "name": "Fictional Access 06",
+        "category": "transport"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.06,
+          4.65
+        ]
+      },
+      "properties": {
+        "source_id": "S01",
+        "name": "Fictional Service 01",
+        "category": "service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.095,
+          4.63
+        ]
+      },
+      "properties": {
+        "source_id": "S02",
+        "name": "Fictional Service 02",
+        "category": "service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.07,
+          4.68
+        ]
+      },
+      "properties": {
+        "source_id": "S03",
+        "name": "Fictional Service 03",
+        "category": "service"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1,
+          4.61
+        ]
+      },
+      "properties": {
+        "source_id": "S04",
+        "name": "Fictional Service 04",
+        "category": "service"
+      }
+    }
+  ]
+}

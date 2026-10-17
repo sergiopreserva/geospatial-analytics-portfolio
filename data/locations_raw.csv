@@ -1,0 +1,33 @@
+source_id,name,category,latitude,longitude
+R01,Fictional Retail 01,retail,4.6500,-74.0600
+R02,Fictional Retail 02,retail,4.6600,-74.0650
+R03,Fictional Retail 03,retail,4.6700,-74.0550
+R04,Fictional Retail 04,retail,4.6710,-74.0570
+R05,Fictional Retail 05,retail,4.6350,-74.0750
+R06,Fictional Retail 06,retail,4.6370,-74.0770
+R07,Fictional Retail 07,retail,4.6320,-74.0760
+R08,Fictional Retail 08,retail,4.6550,-74.1070
+R09,Fictional Retail 09,retail,4.6000,-74.1100
+R10,Fictional Retail 10,retail,4.7000,-74.0800
+R11,Fictional Retail 11,retail,4.6150,-74.0900
+R12,Fictional Retail 12,retail,4.6800,-74.1200
+T01,Fictional Access 01,transport,4.6705,-74.0555
+T02,Fictional Access 02,transport,4.6400,-74.0800
+T03,Fictional Access 03,transport,4.6650,-74.1100
+T04,Fictional Access 04,transport,4.5960,-74.1110
+T05,Fictional Access 05,transport,4.6900,-74.0900
+T06,Fictional Access 06,transport,4.6200,-74.0850
+S01,Fictional Service 01,service,4.6500,-74.0600
+S02,Fictional Service 02,service,4.6300,-74.0950
+S03,Fictional Service 03,service,4.6800,-74.0700
+S04,Fictional Service 04,service,4.6100,-74.1000
+R01,Fictional Retail 01,retail,4.6500,-74.0600
+R02,Conflicting Record 02,retail,4.6600,-74.0670
+B01,Missing Latitude,retail,,-74.0800
+B02,Nonfinite Latitude,retail,NaN,-74.0800
+B03,Outside Screening Box,retail,6.2500,-75.5700
+B04,Possible Axis Swap,retail,-74.0800,4.6400
+B05,Invalid Text Coordinate,retail,not-a-number,-74.0800
+B06,,retail,4.6400,-74.0800
+B07,Unsupported Category,unknown,4.6400,-74.0800
+B08,Invalid Global Range,retail,95.0000,-74.0800

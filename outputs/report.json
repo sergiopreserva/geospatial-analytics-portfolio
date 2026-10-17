@@ -1,0 +1,385 @@
+{
+  "provenance": {
+    "data_type": "synthetic",
+    "source_sha256": {
+      "locations_raw.csv": "9c8cb319720f1ef48dcf8b86b4e6d1edd71e50ff5e96b3344ada77bfae334337",
+      "candidate_sites.csv": "5a1a5063df06b3b0c202557cedc770b1106c8b7e20acfc49478e137af3b80198"
+    }
+  },
+  "quality": {
+    "input_rows": 32,
+    "accepted_rows": 21,
+    "quarantined_rows": 11,
+    "acceptance_rate_pct": 65.62,
+    "issue_counts": {
+      "conflicting_identifier": 2,
+      "duplicate_identifier": 1,
+      "invalid_coordinate_range": 1,
+      "invalid_or_missing_coordinates": 3,
+      "missing_name": 1,
+      "outside_screening_box": 1,
+      "possible_swapped_coordinates": 1,
+      "unsupported_category": 1
+    },
+    "coincident_location_groups": [
+      [
+        "R01",
+        "S01"
+      ]
+    ],
+    "rules": {
+      "crs": "WGS84",
+      "screening_box_wsen": [
+        -74.25,
+        4.45,
+        -73.95,
+        4.9
+      ],
+      "coordinate_autocorrection": false,
+      "conflicting_ids": "quarantine all versions"
+    }
+  },
+  "screening": {
+    "scenarios": {
+      "Balanced": {
+        "weights": {
+          "demand": 0.45,
+          "access": 0.3,
+          "competition": 0.25
+        },
+        "ranking": [
+          {
+            "site_id": "D",
+            "label": "Fictional South",
+            "latitude": 4.595,
+            "longitude": -74.11,
+            "demand": 60.0,
+            "nearest_transport_m": 157.0010225650907,
+            "competitors_500m": 0,
+            "access": 89.5332651623273,
+            "competition": 100.0,
+            "score": 78.85997954869819,
+            "rank": 1
+          },
+          {
+            "site_id": "A",
+            "label": "Fictional North",
+            "latitude": 4.67,
+            "longitude": -74.055,
+            "demand": 82.0,
+            "nearest_transport_m": 78.49637536443034,
+            "competitors_500m": 2,
+            "access": 94.76690830903797,
+            "competition": 33.333333333333336,
+            "score": 73.66340582604472,
+            "rank": 2
+          },
+          {
+            "site_id": "C",
+            "label": "Fictional West",
+            "latitude": 4.655,
+            "longitude": -74.105,
+            "demand": 90.0,
+            "nearest_transport_m": 1242.3779614531945,
+            "competitors_500m": 1,
+            "access": 17.17480256978703,
+            "competition": 50.0,
+            "score": 58.15244077093611,
+            "rank": 3
+          },
+          {
+            "site_id": "B",
+            "label": "Fictional Central",
+            "latitude": 4.635,
+            "longitude": -74.075,
+            "demand": 68.0,
+            "nearest_transport_m": 784.9819557892239,
+            "competitors_500m": 3,
+            "access": 47.66786961405174,
+            "competition": 25.0,
+            "score": 51.15036088421552,
+            "rank": 4
+          }
+        ]
+      },
+      "Access first": {
+        "weights": {
+          "demand": 0.2,
+          "access": 0.7,
+          "competition": 0.1
+        },
+        "ranking": [
+          {
+            "site_id": "A",
+            "label": "Fictional North",
+            "latitude": 4.67,
+            "longitude": -74.055,
+            "demand": 82.0,
+            "nearest_transport_m": 78.49637536443034,
+            "competitors_500m": 2,
+            "access": 94.76690830903797,
+            "competition": 33.333333333333336,
+            "score": 86.07016914965992,
+            "rank": 1
+          },
+          {
+            "site_id": "D",
+            "label": "Fictional South",
+            "latitude": 4.595,
+            "longitude": -74.11,
+            "demand": 60.0,
+            "nearest_transport_m": 157.0010225650907,
+            "competitors_500m": 0,
+            "access": 89.5332651623273,
+            "competition": 100.0,
+            "score": 84.6732856136291,
+            "rank": 2
+          },
+          {
+            "site_id": "B",
+            "label": "Fictional Central",
+            "latitude": 4.635,
+            "longitude": -74.075,
+            "demand": 68.0,
+            "nearest_transport_m": 784.9819557892239,
+            "competitors_500m": 3,
+            "access": 47.66786961405174,
+            "competition": 25.0,
+            "score": 49.46750872983622,
+            "rank": 3
+          },
+          {
+            "site_id": "C",
+            "label": "Fictional West",
+            "latitude": 4.655,
+            "longitude": -74.105,
+            "demand": 90.0,
+            "nearest_transport_m": 1242.3779614531945,
+            "competitors_500m": 1,
+            "access": 17.17480256978703,
+            "competition": 50.0,
+            "score": 35.02236179885092,
+            "rank": 4
+          }
+        ]
+      },
+      "Low competition": {
+        "weights": {
+          "demand": 0.25,
+          "access": 0.2,
+          "competition": 0.55
+        },
+        "ranking": [
+          {
+            "site_id": "D",
+            "label": "Fictional South",
+            "latitude": 4.595,
+            "longitude": -74.11,
+            "demand": 60.0,
+            "nearest_transport_m": 157.0010225650907,
+            "competitors_500m": 0,
+            "access": 89.5332651623273,
+            "competition": 100.0,
+            "score": 87.90665303246547,
+            "rank": 1
+          },
+          {
+            "site_id": "A",
+            "label": "Fictional North",
+            "latitude": 4.67,
+            "longitude": -74.055,
+            "demand": 82.0,
+            "nearest_transport_m": 78.49637536443034,
+            "competitors_500m": 2,
+            "access": 94.76690830903797,
+            "competition": 33.333333333333336,
+            "score": 57.786714995140926,
+            "rank": 2
+          },
+          {
+            "site_id": "C",
+            "label": "Fictional West",
+            "latitude": 4.655,
+            "longitude": -74.105,
+            "demand": 90.0,
+            "nearest_transport_m": 1242.3779614531945,
+            "competitors_500m": 1,
+            "access": 17.17480256978703,
+            "competition": 50.0,
+            "score": 53.43496051395741,
+            "rank": 3
+          },
+          {
+            "site_id": "B",
+            "label": "Fictional Central",
+            "latitude": 4.635,
+            "longitude": -74.075,
+            "demand": 68.0,
+            "nearest_transport_m": 784.9819557892239,
+            "competitors_500m": 3,
+            "access": 47.66786961405174,
+            "competition": 25.0,
+            "score": 40.28357392281035,
+            "rank": 4
+          }
+        ]
+      }
+    },
+    "top_rank_count": {
+      "D": 2,
+      "A": 1
+    },
+    "candidate_count": 4,
+    "distance_method": "great-circle haversine, metres",
+    "disclaimer": "Synthetic heuristic screening; not observed foot traffic, revenue or a causal model."
+  },
+  "locations": [
+    {
+      "source_id": "R01",
+      "name": "Fictional Retail 01",
+      "category": "retail",
+      "latitude": 4.65,
+      "longitude": -74.06
+    },
+    {
+      "source_id": "R03",
+      "name": "Fictional Retail 03",
+      "category": "retail",
+      "latitude": 4.67,
+      "longitude": -74.055
+    },
+    {
+      "source_id": "R04",
+      "name": "Fictional Retail 04",
+      "category": "retail",
+      "latitude": 4.671,
+      "longitude": -74.057
+    },
+    {
+      "source_id": "R05",
+      "name": "Fictional Retail 05",
+      "category": "retail",
+      "latitude": 4.635,
+      "longitude": -74.075
+    },
+    {
+      "source_id": "R06",
+      "name": "Fictional Retail 06",
+      "category": "retail",
+      "latitude": 4.637,
+      "longitude": -74.077
+    },
+    {
+      "source_id": "R07",
+      "name": "Fictional Retail 07",
+      "category": "retail",
+      "latitude": 4.632,
+      "longitude": -74.076
+    },
+    {
+      "source_id": "R08",
+      "name": "Fictional Retail 08",
+      "category": "retail",
+      "latitude": 4.655,
+      "longitude": -74.107
+    },
+    {
+      "source_id": "R09",
+      "name": "Fictional Retail 09",
+      "category": "retail",
+      "latitude": 4.6,
+      "longitude": -74.11
+    },
+    {
+      "source_id": "R10",
+      "name": "Fictional Retail 10",
+      "category": "retail",
+      "latitude": 4.7,
+      "longitude": -74.08
+    },
+    {
+      "source_id": "R11",
+      "name": "Fictional Retail 11",
+      "category": "retail",
+      "latitude": 4.615,
+      "longitude": -74.09
+    },
+    {
+      "source_id": "R12",
+      "name": "Fictional Retail 12",
+      "category": "retail",
+      "latitude": 4.68,
+      "longitude": -74.12
+    },
+    {
+      "source_id": "T01",
+      "name": "Fictional Access 01",
+      "category": "transport",
+      "latitude": 4.6705,
+      "longitude": -74.0555
+    },
+    {
+      "source_id": "T02",
+      "name": "Fictional Access 02",
+      "category": "transport",
+      "latitude": 4.64,
+      "longitude": -74.08
+    },
+    {
+      "source_id": "T03",
+      "name": "Fictional Access 03",
+      "category": "transport",
+      "latitude": 4.665,
+      "longitude": -74.11
+    },
+    {
+      "source_id": "T04",
+      "name": "Fictional Access 04",
+      "category": "transport",
+      "latitude": 4.596,
+      "longitude": -74.111
+    },
+    {
+      "source_id": "T05",
+      "name": "Fictional Access 05",
+      "category": "transport",
+      "latitude": 4.69,
+      "longitude": -74.09
+    },
+    {
+      "source_id": "T06",
+      "name": "Fictional Access 06",
+      "category": "transport",
+      "latitude": 4.62,
+      "longitude": -74.085
+    },
+    {
+      "source_id": "S01",
+      "name": "Fictional Service 01",
+      "category": "service",
+      "latitude": 4.65,
+      "longitude": -74.06
+    },
+    {
+      "source_id": "S02",
+      "name": "Fictional Service 02",
+      "category": "service",
+      "latitude": 4.63,
+      "longitude": -74.095
+    },
+    {
+      "source_id": "S03",
+      "name": "Fictional Service 03",
+      "category": "service",
+      "latitude": 4.68,
+      "longitude": -74.07
+    },
+    {
+      "source_id": "S04",
+      "name": "Fictional Service 04",
+      "category": "service",
+      "latitude": 4.61,
+      "longitude": -74.1
+    }
+  ]
+}

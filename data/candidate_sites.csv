@@ -1,0 +1,5 @@
+site_id,label,latitude,longitude,synthetic_demand_index
+A,Fictional North,4.6700,-74.0550,82
+B,Fictional Central,4.6350,-74.0750,68
+C,Fictional West,4.6550,-74.1050,90
+D,Fictional South,4.5950,-74.1100,60

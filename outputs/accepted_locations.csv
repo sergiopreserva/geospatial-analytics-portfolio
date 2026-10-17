@@ -1,0 +1,22 @@
+source_id,name,category,latitude,longitude
+R01,Fictional Retail 01,retail,4.65,-74.06
+R03,Fictional Retail 03,retail,4.67,-74.055
+R04,Fictional Retail 04,retail,4.671,-74.057
+R05,Fictional Retail 05,retail,4.635,-74.075
+R06,Fictional Retail 06,retail,4.637,-74.077
+R07,Fictional Retail 07,retail,4.632,-74.076
+R08,Fictional Retail 08,retail,4.655,-74.107
+R09,Fictional Retail 09,retail,4.6,-74.11
+R10,Fictional Retail 10,retail,4.7,-74.08
+R11,Fictional Retail 11,retail,4.615,-74.09
+R12,Fictional Retail 12,retail,4.68,-74.12
+T01,Fictional Access 01,transport,4.6705,-74.0555
+T02,Fictional Access 02,transport,4.64,-74.08
+T03,Fictional Access 03,transport,4.665,-74.11
+T04,Fictional Access 04,transport,4.596,-74.111
+T05,Fictional Access 05,transport,4.69,-74.09
+T06,Fictional Access 06,transport,4.62,-74.085
+S01,Fictional Service 01,service,4.65,-74.06
+S02,Fictional Service 02,service,4.63,-74.095
+S03,Fictional Service 03,service,4.68,-74.07
+S04,Fictional Service 04,service,4.61,-74.1

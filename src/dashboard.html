@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Location analytics · synthetic portfolio demonstration</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#183040;background:#f4f2ec}*{box-sizing:border-box}body{margin:0}header{background:#142d3b;color:#fff;padding:34px max(24px,calc((100vw - 1180px)/2))}header p{max-width:720px;color:#c7d6da;line-height:1.55}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.8px;color:#ffbf76}h1{font-size:clamp(30px,5vw,48px);margin:15px 0}main{max-width:1228px;margin:auto;padding:28px 24px}h2{font-size:22px;margin-top:0}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}.card,.panel{background:#fff;border:1px solid #d9e1df;border-radius:12px;padding:22px}.card span{font-size:13px;color:#50666d}.value{font-size:32px;font-weight:700;margin:10px 0 2px}.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}.panel p,.notes{font-size:14px;line-height:1.6;color:#50666d}.tag{color:#a45414}.controls{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:8px 0 20px}select{padding:11px;border:1px solid #b7c5c6;border-radius:6px;background:white;color:#183040;font-size:15px}svg{width:100%;height:auto}.bar{display:grid;grid-template-columns:32px 1fr 50px;align-items:center;gap:10px;margin:21px 0}.track{height:18px;background:#e9eeec;border-radius:4px;overflow:hidden}.fill{height:100%;background:#1c777b}.score{font-size:14px;font-weight:700}table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:13px 10px;border-bottom:1px solid #e2e9e6}th{font-size:12px;color:#50666d}.tablewrap{overflow-x:auto}.bottom{margin-top:20px}.legend{display:flex;gap:16px;font-size:12px;color:#50666d}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.warning{background:#fff1dd;border-left:4px solid #d68a34;padding:16px;font-size:14px;line-height:1.6;margin-top:20px}footer{font-size:12px;color:#50666d;padding:22px 0}@media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.controls{align-items:flex-start;flex-direction:column}header{padding:28px 24px}}
+</style></head><body>
+<header><div class="eyebrow">PORTFOLIO DEMONSTRATION · SYNTHETIC DATA</div><h1>From locations to decisions.</h1><p>A reproducible quality gate and transparent site-screening model. Explore how priorities change the shortlist before requesting real market evidence.</p></header>
+<main><section class="cards" aria-label="Data quality summary"><div class="card"><span>INPUT RECORDS</span><div class="value" id="raw"></div></div><div class="card"><span>ACCEPTED RECORDS</span><div class="value" id="accepted"></div></div><div class="card"><span>QUARANTINED RECORDS</span><div class="value tag" id="rejected"></div></div><div class="card"><span>CANDIDATE SITES</span><div class="value" id="sites"></div></div></section>
+<div class="grid"><section class="panel"><h2>Where are the candidates?</h2><p>Coordinate schematic, WGS84. Fictional features in a Bogotá-area screening box; no basemap or administrative boundary.</p><svg id="map" viewBox="0 0 560 340" role="img" aria-label="Schematic showing fictional retail, access and candidate locations"></svg><div class="legend"><span><i class="dot" style="background:#a1acae"></i>Retail</span><span><i class="dot" style="background:#1c777b"></i>Access</span><span><i class="dot" style="background:#d88a36"></i>Candidate</span></div></section>
+<section class="panel"><h2>How do priorities change the result?</h2><div class="controls"><label for="scenario">Decision scenario</label><select id="scenario"></select></div><div id="weights" class="notes"></div><div id="bars"></div><p id="recommendation"></p></section></div>
+<section class="panel bottom"><h2>Evidence behind the ranking</h2><div class="tablewrap"><table><thead><tr><th>SITE</th><th>SYNTHETIC DEMAND /100</th><th>NEAREST ACCESS (m)</th><th>RETAIL WITHIN 500 m</th><th>SCORE /100</th></tr></thead><tbody id="ranking"></tbody></table></div></section>
+<div class="warning"><strong>Interpretation limit.</strong> This is an illustrative, weighted score. It does not measure foot traffic, predict revenue, establish causality, or justify an investment. Distances are straight-line, and the fictional point inventory is deliberately small.</div>
+<footer>Python-generated outputs · no API keys, external scripts or network access required · both demo projects use invented data</footer></main>
+<script id="report-data" type="application/json">__REPORT_JSON__</script>
+<script>
+'use strict';
+const report=JSON.parse(document.getElementById('report-data').textContent);
+const byId=id=>document.getElementById(id);
+byId('raw').textContent=report.quality.input_rows;
+byId('accepted').textContent=report.quality.accepted_rows;
+byId('rejected').textContent=report.quality.quarantined_rows;
+byId('sites').textContent=report.screening.candidate_count;
+for(const name of Object.keys(report.screening.scenarios)){const option=document.createElement('option');option.value=name;option.textContent=name;byId('scenario').append(option);}
+function render(){
+ const result=report.screening.scenarios[byId('scenario').value];
+ byId('weights').textContent=Object.entries(result.weights).map(([key,value])=>`${key}: ${Math.round(value*100)}%`).join(' · ');
+ byId('bars').replaceChildren();byId('ranking').replaceChildren();
+ for(const row of result.ranking){
+  const bar=document.createElement('div');bar.className='bar';
+  const label=document.createElement('strong');label.textContent=row.site_id;
+  const track=document.createElement('div');track.className='track';
+  const fill=document.createElement('div');fill.className='fill';fill.style.width=`${row.score}%`;track.append(fill);
+  const score=document.createElement('span');score.className='score';score.textContent=row.score.toFixed(1);bar.append(label,track,score);byId('bars').append(bar);
+  const tr=document.createElement('tr');
+  for(const value of [row.label,row.demand,Math.round(row.nearest_transport_m),row.competitors_500m,row.score.toFixed(1)]){const td=document.createElement('td');td.textContent=value;tr.append(td);}byId('ranking').append(tr);
+ }
+ byId('recommendation').textContent=`${result.ranking[0].label} ranks first in this scenario. Treat it as a shortlist candidate and validate real demand, rents and travel times before deciding.`;
+}
+const ns='http://www.w3.org/2000/svg';
+function svgEl(tag,attrs,text){const el=document.createElementNS(ns,tag);for(const[key,value]of Object.entries(attrs))el.setAttribute(key,String(value));if(text!==undefined)el.textContent=text;return el;}
+const svg=byId('map'),candidates=report.screening.scenarios.Balanced.ranking;
+const x=lon=>50+(lon+74.13)/0.09*460,y=lat=>290-(lat-4.59)/0.12*250;
+svg.append(svgEl('rect',{x:45,y:30,width:475,height:265,fill:'#f3f6f4',rx:8}));
+for(const p of report.locations.filter(p=>p.category!=='service'))svg.append(svgEl('circle',{cx:x(p.longitude),cy:y(p.latitude),r:4.5,fill:p.category==='retail'?'#a1acae':'#1c777b'}));
+for(const p of candidates){svg.append(svgEl('circle',{cx:x(p.longitude),cy:y(p.latitude),r:8,fill:'#d88a36',stroke:'#fff','stroke-width':2}));svg.append(svgEl('text',{x:x(p.longitude)+12,y:y(p.latitude)-9,fill:'#183040','font-size':15,'font-weight':700},p.site_id));}
+svg.append(svgEl('text',{x:170,y:325,fill:'#50666d','font-size':12},'West ← longitude → East'));
+svg.append(svgEl('text',{x:50,y:18,fill:'#50666d','font-size':12},'North ↑ latitude'));
+byId('scenario').addEventListener('change',render);render();
+</script></body></html>

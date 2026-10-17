@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="770" viewBox="0 0 1200 770">
+<rect width="1200" height="770" fill="#f4f2ec"/>
+<rect width="1200" height="145" fill="#142d3b"/>
+<text x="40" y="37" font-family="Arial,sans-serif" font-size="14" fill="#ffbf76" font-weight="bold">SYNTHETIC DATA / PORTFOLIO DEMONSTRATION</text>
+<text x="40" y="86" font-family="Arial,sans-serif" font-size="35" fill="#ffffff" font-weight="bold">From location records to a defensible shortlist.</text>
+<text x="40" y="120" font-family="Arial,sans-serif" font-size="17" fill="#c7d6da" font-weight="normal">A static overview generated from the same Python outputs as the interactive dashboard.</text>
+<rect x="40" y="170" width="360" height="115" rx="12" fill="#ffffff"/>
+<text x="64" y="202" font-family="Arial,sans-serif" font-size="14" fill="#50666d" font-weight="bold">INPUT RECORDS</text>
+<text x="64" y="254" font-family="Arial,sans-serif" font-size="40" fill="#183040" font-weight="bold">32</text>
+<rect x="420" y="170" width="360" height="115" rx="12" fill="#ffffff"/>
+<text x="444" y="202" font-family="Arial,sans-serif" font-size="14" fill="#50666d" font-weight="bold">ACCEPTED</text>
+<text x="444" y="254" font-family="Arial,sans-serif" font-size="40" fill="#183040" font-weight="bold">21</text>
+<rect x="800" y="170" width="360" height="115" rx="12" fill="#ffffff"/>
+<text x="824" y="202" font-family="Arial,sans-serif" font-size="14" fill="#50666d" font-weight="bold">QUARANTINED</text>
+<text x="824" y="254" font-family="Arial,sans-serif" font-size="40" fill="#183040" font-weight="bold">11</text>
+<rect x="40" y="310" width="620" height="330" rx="12" fill="#ffffff"/>
+<rect x="680" y="310" width="480" height="330" rx="12" fill="#ffffff"/>
+<text x="65" y="350" font-family="Arial,sans-serif" font-size="23" fill="#183040" font-weight="bold">Balanced scenario</text>
+<text x="65" y="380" font-family="Arial,sans-serif" font-size="15" fill="#50666d" font-weight="normal">Demand 45% / Access 30% / Competition 25%</text>
+<text x="65" y="436" font-family="Arial,sans-serif" font-size="18" fill="#183040" font-weight="bold">D</text>
+<rect x="100" y="420" width="425" height="21" rx="4" fill="#e9eeec"/>
+<rect x="100" y="420" width="335.15" height="21" rx="4" fill="#1c777b"/>
+<text x="545" y="437" font-family="Arial,sans-serif" font-size="17" fill="#183040" font-weight="bold">78.9/100</text>
+<text x="65" y="485" font-family="Arial,sans-serif" font-size="18" fill="#183040" font-weight="bold">A</text>
+<rect x="100" y="469" width="425" height="21" rx="4" fill="#e9eeec"/>
+<rect x="100" y="469" width="313.07" height="21" rx="4" fill="#1c777b"/>
+<text x="545" y="486" font-family="Arial,sans-serif" font-size="17" fill="#183040" font-weight="bold">73.7/100</text>
+<text x="65" y="534" font-family="Arial,sans-serif" font-size="18" fill="#183040" font-weight="bold">C</text>
+<rect x="100" y="518" width="425" height="21" rx="4" fill="#e9eeec"/>
+<rect x="100" y="518" width="247.15" height="21" rx="4" fill="#1c777b"/>
+<text x="545" y="535" font-family="Arial,sans-serif" font-size="17" fill="#183040" font-weight="bold">58.2/100</text>
+<text x="65" y="583" font-family="Arial,sans-serif" font-size="18" fill="#183040" font-weight="bold">B</text>
+<rect x="100" y="567" width="425" height="21" rx="4" fill="#e9eeec"/>
+<rect x="100" y="567" width="217.39" height="21" rx="4" fill="#1c777b"/>
+<text x="545" y="584" font-family="Arial,sans-serif" font-size="17" fill="#183040" font-weight="bold">51.2/100</text>
+<text x="705" y="350" font-family="Arial,sans-serif" font-size="23" fill="#183040" font-weight="bold">Which site ranks first?</text>
+<text x="705" y="398" font-family="Arial,sans-serif" font-size="16" fill="#50666d" font-weight="normal">Balanced</text>
+<text x="705" y="426" font-family="Arial,sans-serif" font-size="22" fill="#183040" font-weight="bold">Fictional South</text>
+<text x="705" y="473" font-family="Arial,sans-serif" font-size="16" fill="#50666d" font-weight="normal">Access first</text>
+<text x="705" y="501" font-family="Arial,sans-serif" font-size="22" fill="#183040" font-weight="bold">Fictional North</text>
+<text x="705" y="548" font-family="Arial,sans-serif" font-size="16" fill="#50666d" font-weight="normal">Low competition</text>
+<text x="705" y="576" font-family="Arial,sans-serif" font-size="22" fill="#183040" font-weight="bold">Fictional South</text>
+<text x="40" y="682" font-family="Arial,sans-serif" font-size="18" fill="#183040" font-weight="bold">Decision: shortlist for investigation; validate actual demand, rents and travel times before investing.</text>
+<text x="40" y="718" font-family="Arial,sans-serif" font-size="16" fill="#50666d" font-weight="normal">All businesses, point locations and demand values are invented. Scores are heuristics, not revenue predictions.</text>
+<text x="40" y="746" font-family="Arial,sans-serif" font-size="15" fill="#50666d" font-weight="normal">Straight-line distances / no observed foot traffic / no causal claims / no Placer.ai data</text>
+</svg>

@@ -1,0 +1,12 @@
+source_row,source_id,name,category,latitude,longitude,issues
+3,R02,Fictional Retail 02,retail,4.6600,-74.0650,conflicting_identifier
+24,R01,Fictional Retail 01,retail,4.6500,-74.0600,duplicate_identifier
+25,R02,Conflicting Record 02,retail,4.6600,-74.0670,conflicting_identifier
+26,B01,Missing Latitude,retail,,-74.0800,invalid_or_missing_coordinates
+27,B02,Nonfinite Latitude,retail,NaN,-74.0800,invalid_or_missing_coordinates
+28,B03,Outside Screening Box,retail,6.2500,-75.5700,outside_screening_box
+29,B04,Possible Axis Swap,retail,-74.0800,4.6400,possible_swapped_coordinates
+30,B05,Invalid Text Coordinate,retail,not-a-number,-74.0800,invalid_or_missing_coordinates
+31,B06,,retail,4.6400,-74.0800,missing_name
+32,B07,Unsupported Category,unknown,4.6400,-74.0800,unsupported_category
+33,B08,Invalid Global Range,retail,95.0000,-74.0800,invalid_coordinate_range
